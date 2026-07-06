@@ -1,0 +1,14 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/javascript-node:24
+
+    ports:
+      # "ホスト側のポート: - デフォルト値 :{コンテナ側のポート}"
+      - "${APP_PORT:-3000}:3000"
+      - "${DRIZZLE_PORT:-4983}:4983"
+      - "${WRANGLER_PORT:-8787}:8787"
+    volumes:
+      - ..:/workspaces/app:cached
+
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
