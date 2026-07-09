@@ -11,5 +11,4 @@ services:
       - ..:/workspaces/app:cached
     working_dir: /workspaces/app
 
-    command: /bin/sh -c "while sleep 1000; do :; done"
-
+    command: sleep infinity

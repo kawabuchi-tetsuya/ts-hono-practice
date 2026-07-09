@@ -4,7 +4,13 @@
 const config = {
   semi: false,
   singleQuote: true,
-  trailingComma: "all",
-};
+  trailingComma: 'all',
+  overrides: [
+    {
+      files: ['*.yaml', '*.yml'],
+      options: { singleQuote: false },
+    },
+  ],
+}
 
-export default config;
+export default config
